@@ -1,0 +1,22 @@
+<table width="800">
+<tr><td colspan="5"><span class="nav">SMART Shared Navigation Header</span></td></tr>
+<tr>
+<script language="javascript">
+
+  function makeLink(linkurl,linktxt ){
+  //alert(' executing '+linkurl);
+  
+  if ('<!--#echo var="DOCUMENT_NAME" -->'==linkurl ){
+       document.write("<td bgcolor=\"white\"><b>"+linktxt+"</b></td>");
+     }else{
+       document.write("<td><a href=\""+linkurl+"\">"+linktxt+"</a></td>");
+     }
+  }
+  makeLink("Link1.shtml","Introduction");
+  makeLink("Link2.shtml","Printenv");
+  makeLink("Link3.shtml","Challenges");
+  makeLink("Link4.shtml","Smart Headers");
+  makeLink("Link5.shtml","Source Listings");
+</script>
+</tr>
+</table>

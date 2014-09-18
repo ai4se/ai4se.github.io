@@ -1,0 +1,3 @@
+<hr>
+<i>Last modified: <!--#echo var="LAST_MODIFIED" --></i><br> 
+<i>Today's date: <!--#echo var="DATE_LOCAL" --></i><br>

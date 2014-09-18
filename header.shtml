@@ -1,0 +1,10 @@
+<table width="800">
+<tr><td colspan="5"><span class="nav">Shared Navigation Header</span></td></tr>
+<tr>
+  <td><a href="Link1.shtml">Introduction</a></td>
+  <td><a href="Link2.shtml">Printenv</a></td>
+  <td><a href="Link3.shtml">Challenges</a></td>
+  <td><a href="Link4.shtml">Smart Includes</a></td>
+  <td><a href="Link5.shtml">Source Listings</a></td>
+</tr>
+</table>

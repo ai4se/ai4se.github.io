@@ -1,0 +1,54 @@
+d>
+<title>An SHTML sample</title>
+
+<link rel="stylesheet" type="text/css" href="shtml.css">
+
+</head>
+<body>
+
+<div class="ssi">
+<!--#include file="header.shtml"-->
+</div>
+<h1>Server Side Includes</h1>
+<p>(On this site, content from included files has a pink background).</p>
+
+<h2>Overview</h2>
+
+<p>Server Side Includes (SSIs) allow you to embed a variety of commands in your HTML documents, replacing these commands with their results prior to serving the files when requested.</p>
+
+<p>Certain rules generally apply to SSI processing:
+<ul>
+<li>SSI processing must be activated on the particular server (which is why these pages are on a different server);</li>
+<li>To limit server overhead, a unique file extension (.shtml) is usually required and only files with this extension will be parsed;</li>
+<li>All commands are entered as HTML comments.</li>
+</ul>
+
+<h3>Some Useful SSI Directives</h3>
+
+
+<p><b><tt><!--include file="filename.ext" --></tt></b><br>
+This powerful command  allows you to include one file in another, but unlike files "included" through style-sheet or javascript references, the final file is assembled on the server before being sent to the browser. Using it, an author can give every page on the web site a standard navigation header, standard footer, etc. Further, because the files being included may themselves be SHTML files, they may use additional SSI commands to produce a dynamic site.</p>
+
+<p><b><tt><!--#echo var="LAST_MODIFIED" --></tt></b><br>
+This command adds the actual file-modification date for the file requested in the HTTP request currently being serviced (not the file in which it occurs). This allows the single footer on all these pages to reveal the correct file modification date for the "content file" being served.</p>
+
+<p><b><tt><!--#echo var="DOCUMENT_NAME" --></tt></b><br>
+This command adds the name of the file being requested to the output. Since this happens on the server rather than in the browser, it can be useful as a means of customizing a standard header (See the "Smart Includes" link...).</p>
+
+<p><b><tt><!--#printenv --></tt></b><br>
+If you're wondering what-all you can "echo", "printenv" may be useful to you as a step along a path of development than as a standard tool, but <b>printenv</b>  displays the information available in the SSI execution environment. (It is recommended that you wrap it in <pre> and </pre> tags to make the output more readable!)</p>
+
+<p><b><tt><!--#exec cmd="<i>shell command</i>" --></tt></b><br>
+<b>This SSI command is usually disabled</b>. It executes the supplied shell command ("ls" for example, to list a directory) and returns the resulting text. Since full shell access can lead the server compromise, most servers do not enable this option.</p>
+
+<p>There are other SSI commands, which you are invited to <a href="http://httpd.apache.org/docs/1.3/howto/ssi.html">explore here</a>.</p>
+
+<h3>This Page</h3>
+<p>The HTML you are now viewing is built by combining a <a href="header.txt" target="_blank">header</a>, a <a href="link1.txt" target="_blank">body</a>, and a <a href="footer.txt" target="_blank">footer</a> (you might want to view the pieces).</p>
+
+
+<div class="ssi">
+<!--#include file="footer.shtml"-->
+</div>
+</body>
+</html>
